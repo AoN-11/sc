@@ -15,6 +15,6 @@ public class Call {
 
 
     public void play() {
-        soundPool.play(soundId, 1.0f, 1.0f, 0, 0, 1.0f);
+        soundPool.play(soundId, 1.0f, 1.0f, 0, -1, 1.0f);
     }
 }
