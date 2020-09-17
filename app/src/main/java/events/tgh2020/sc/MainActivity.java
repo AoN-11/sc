@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     private static Call callInstance = null;
-    private SharedPreferences dataStore;
+    private static SharedPreferences dataStore = null;
     private EditText editText;
 
     @Override
@@ -52,5 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
     public static Call getCall() {
         return callInstance;
+    }
+
+    public static SharedPreferences getDataStore() {
+        return dataStore;
     }
 }
