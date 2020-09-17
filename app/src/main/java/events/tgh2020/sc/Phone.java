@@ -15,7 +15,7 @@ public class Phone extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.phone);
 
-        callInstance = new Call(getApplicationContext());
+        callInstance = MainActivity.getCall();
 
         findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
             @Override

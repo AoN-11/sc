@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Call callInstance;
+    private static Call callInstance = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,5 +27,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public static Call getCall() {
+        return callInstance;
     }
 }
