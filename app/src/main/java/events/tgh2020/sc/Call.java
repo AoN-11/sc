@@ -9,7 +9,7 @@ public class Call {
     private int soundId;
 
     public Call(Context context) {
-        SoundPool soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+        soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
         soundId = soundPool.load(context,R.raw.sound1, 1);
     }
 
