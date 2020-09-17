@@ -1,6 +1,7 @@
 package events.tgh2020.sc;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Phone extends AppCompatActivity {
     Call callInstance;
     private TextView textRead;
+    private SharedPreferences dataStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -18,6 +20,7 @@ public class Phone extends AppCompatActivity {
         setContentView(R.layout.phone);
 
         textRead = findViewById(R.id.text_read);
+        dataStore = MainActivity.getDataStore();
         String str = dataStore.getString("input", "Nothing");
         if(!str.equals("Nothing")) {
             textRead.setText(str);
