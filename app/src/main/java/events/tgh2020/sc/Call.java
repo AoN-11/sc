@@ -10,7 +10,7 @@ public class Call {
 
     public Call(Context context) {
         SoundPool soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-        soundId = soundPool.load(context,R.raw.Telephone-Ringtone01-1, 1);
+        soundId = soundPool.load(context,R.raw.sound1, 1);
     }
 
 
