@@ -2,12 +2,12 @@ package events.tgh2020.sc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button button;
     Call callInstance;
 
     @Override
@@ -15,14 +15,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = (Button) findViewById(R.id.button1);
         callInstance = new Call(getApplicationContext());
 
-        button.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // クリック時の処理
                 callInstance.play();
+                Intent intent = new Intent(getApplication(), Phone.class);
+                startActivity(intent);
             }
         });
+
     }
 }
