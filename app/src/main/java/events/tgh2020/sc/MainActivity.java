@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         callInstance = new Call(getApplicationContext());
 
-        findViewById(R.id.imageButton).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.imageButton2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // クリック時の処理
