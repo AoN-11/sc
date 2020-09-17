@@ -5,9 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     private static Call callInstance = null;
@@ -41,10 +45,22 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.imageButton2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // クリック時の処理
-                callInstance.play();
-                Intent intent = new Intent(getApplication(), Phone.class);
-                startActivity(intent);
+                AlphaAnimation aanim1 = new AlphaAnimation(1, 0.2f);
+                int duration = 400;
+                int delay = 6400;
+                aanim1.setDuration( duration );
+                aanim1.setRepeatCount( delay / duration );
+                aanim1.setRepeatMode( Animation.REVERSE );
+                ((ImageView)findViewById(R.id.imageButton2)).startAnimation(aanim1);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        // クリック時の処理
+                        callInstance.play();
+                        Intent intent = new Intent(getApplication(), Phone.class);
+                        startActivity(intent);
+                    }
+                }, delay);
             }
         });
 
