@@ -33,6 +33,8 @@ public class Phone extends AppCompatActivity {
             public void onClick(View v) {
                 // クリック時の処理
                 callInstance.stop();
+                Intent intent = new Intent(getApplication(), Phone2.class);
+                startActivity(intent);
             }
         });
 
