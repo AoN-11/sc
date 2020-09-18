@@ -1,15 +1,15 @@
-# sc
+# おかんからの電話
 
 ## Description
 
-sc is an Android application that enables you to receive a fake call.
+おかんからの電話 is an Android application that enables you to receive a fake call.
 
 ## Demo
-画像かGIF?
+![](https://user-images.githubusercontent.com/63297509/93559274-4ed47080-f9ba-11ea-825b-f7ee3f5e4d79.png)|![](https://user-images.githubusercontent.com/63297509/93559718-63653880-f9bb-11ea-82b2-216586911cae.png)|![](https://user-images.githubusercontent.com/63297509/93559723-66602900-f9bb-11ea-810b-87e0a20171e8.png)
 
 ## Requirement
 
-- Android Studio 4.0.1
+- [Android Studio](https://developer.android.com/studio) 4.0.1
 - minSdkVersion 21
 - targetSdkVersion 30
 
@@ -30,4 +30,4 @@ sc is an Android application that enables you to receive a fake call.
 
 ## License
 
-sc is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+おかんからの電話 is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
